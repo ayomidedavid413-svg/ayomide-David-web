@@ -6,6 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Page</title>
   <style>
+    .navbar {
+      background-color: #12284a;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar .logo {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .vabar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .navbar a:hover {
+      color: #f0b84d;
+    }
+    .hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+.hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.hero h1 {
+    font-size: 36px;
+    color: #12284a;
+}
+.hero .btn {
+    background-color: #f0b84d;
+    color: #12284a;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+    }
     .card {
     background-color: white;
     max-width: 600px;
@@ -38,6 +81,49 @@
       padding: 10px 20px;
       margin-top: 15px;
     }
+    .section{
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .section h2 {
+      color: #12284a;
+      font-size: 28px;
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card-item {
+      background-color: white;
+      width: 220px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    .card-item h3 {
+      color: #12284a;
+    }
+    .contact {
+    background-color: #12284a;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+.contact h2 {
+    color: #f0b84d;
+}
+.contact a {
+    color: white;
+}
+.footer {
+    background-color: #0c1c36;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
   </style>
 </head>
   <h1>Hello, I'm Ayomide</h1>
@@ -46,11 +132,13 @@
   <p>I am learning HTML with VS Code.</p>
   <a href="https://www.google.com">Click here to visit Google</a>
   <br><br>
+  <img src="web.mp5.jpeg" alt="my picture" width="300">
+  <img src="web.jpg" alt="my picture" width="300>"
   <img src="OnFire.jpeg" alt="My picture" width="300">
   <h2>My Hobbies</h2>
   <ul
     <li>Coding</li>
-    <li>Physics</li>
+    <li>music</li>
     <li>Football</li>
   </ul>
   <button onclick="changeHeading()">Click me</button>
@@ -92,6 +180,65 @@
     }
   </style>
 </head>
+<div class="navbar">
+    <div class="logo">Ayomide</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+    </div>
+</div>
+<div class="section">
+    <h2>What I Am Learning</h2>
+    <div class="cards">
+        <div class="card-item">
+            <h3>HTML</h3>
+            <p>The structure of a website.</p>
+        </div>
+        <div class="card-item">
+            <h3>CSS</h3>
+            <p>The style and colors of a website.</p>
+        </div>
+        <div class="card-item">
+            <h3>Python</h3>
+            <p>My first programming language.</p>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <h2>My Hobbies</h2>
+    <div class="cards">
+        <div class="card-item">
+            <h3>Football</h3>
+            <p>I love watching and playing football.</p>
+        </div>
+        <div class="card-item">
+            <h3>Music</h3>
+            <p>Music keeps me going while I code.</p>
+        </div>
+        <div class="card-item">
+            <h3>Coding</h3>
+            <p>Building websites is now a hobby too.</p>
+        </div>
+    </div>
+</div>
+<div class="contact">
+    <h2>Contact Me</h2>
+    <p>Want to say hello? Send me a message.</p>
+    <p>Email: ayomidedavid413@gmail.com</p>
+    <p>WhatsApp: +234 9166139230</p>
+</div>
+<div class="footer">
+    <p>© 2026 Ayomide. Built with HTML and CSS.</p>
+</div>
+<div class="hero">
+  <img src="web.mp5.jpeg" alt="Ayomide">
+  <img src="web.jpg" alt="Ayomide">
+    <img src="OnFire.jpeg" alt="Ayomide">
+    <h1>Welcome, I am Ayomide</h1>
+    <p>I am a first-year Computer Science student learning to code.</p>
+    <a href="about.html" class="btn">About Me</a>
+ <a href="https://www.youtube.com/watch?v=DWOSu8hqFDo" class="btn" target="_blank">Watch my video</a>  
+</div>
 <body>
   <h1>Hello, I'm Ayomide</h1>
   <p>This is my first paragraph</p>
@@ -99,11 +246,13 @@
   <p>I am learning HTML with VS Code.</p>
   <a href="https://www.google.com">Click here to visit Google</a>
   <br><br>
+  <img src="web.mp5.jpeg" alt="my picture" width="300">
+  <img src="web.jpg" alt="my picture" width="300">
   <img src="OnFire.jpeg" alt="My picture" width="300">
   <h2>My Hobbies</h2>
   <ul>
     <li>Coding</li>
-    <li>Physics</li>
+    <li>music</li>
     <li>Football</li>
   </ul>
   <p><a href="about.html">About Me</a></p>
