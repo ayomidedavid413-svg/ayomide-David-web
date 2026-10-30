@@ -1,164 +1,358 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      background-color: lightblue;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-    }
-    .navbar {
-      background-color: #12284a;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navbar .logo {
-      color: white;
-      font-size: 22px;
-      font-weight: bold;
-    }
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      margin-left: 20px;
-    }
-    .navbar a:hover {
-      color: #f0b84d;
-    }
-    .card {
-      background-color: white;
-      max-width: 600px;
-      margin: 30px auto;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px gray;
-    }
-    h1 {
-      color: darkblue;
-      font-family: Georgia, serif;
-      font-size: 40px;
-    }
-    h2 {
-      color: purple;
-    }
-    p {
-      color: green;
-    }
-    .pics img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin: 5px;
-      transition: transform 0.3s;
-    }
-    .pics img:hover {
-      transform: scale(1.1);
-    }
-    video {
-      max-width: 100%;
-    }
-    .card a {
-      color: darkblue;
-      font-size: 20px;
-    }
-    .card a:hover {
-      color: red;
-    }
-    .btn {
-      background-color: #f0b84d;
-      color: #12284a;
-      padding: 12px 25px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-    }
-    .card a.btn {
-      color: #12284a;
-      font-size: 16px;
-    }
-    button {
-      font-size: 16px;
-      padding: 8px 16px;
-      margin-left: 20px;
-      cursor: pointer;
-    }
-    @media (max-width: 600px) {
-      .navbar {
-        flex-direction: column;
-        gap: 10px;
-      }
-      h1 {
-        font-size: 30px;
-      }
-    }
-    body.dark {
-      background-color: #121212;
-      color: white;
-    }
-    body.dark .card {
-      background-color: #1e1e1e;
-    }
-    body.dark h1,
-    body.dark h2 {
-      color: #f0b84d;
-    }
-    body.dark .card a {
-      color: #f0b84d;
-    }
-    body.dark .card a.btn {
-      color: #12284a;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me | Ayomide</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            color: #222;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Navigation Bar */
+
+        nav {
+            background-color: navy;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: gold;
+        }
+
+        button {
+            background-color: gold;
+            color: navy;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 8px;
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+
+        /* About Introduction */
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px;
+            animation: fadeIn 1.5s;
+        }
+
+        .hero h1 {
+            color: navy;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: 10px auto;
+            font-size: 17px;
+        }
+
+        /* Content Sections */
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: navy;
+            margin-bottom: 18px;
+        }
+
+        section p {
+            max-width: 750px;
+            margin: 10px auto;
+        }
+
+        /* Picture Gallery */
+
+        .photo-section {
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .photo-section img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .photo-section img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Video Section */
+
+        .video-container {
+            max-width: 750px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        video {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 10px;
+        }
+
+        /* Buttons and Links */
+
+        .btn {
+            display: inline-block;
+            background-color: gold;
+            color: navy;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: orange;
+        }
+
+        /* Back to Home */
+
+        .back-home {
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Animation */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Dark Mode */
+
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        .dark-mode nav,
+        .dark-mode footer {
+            background-color: #000;
+        }
+
+        .dark-mode .hero h1,
+        .dark-mode section h2 {
+            color: gold;
+        }
+
+        .dark-mode .video-container {
+            background-color: #252525;
+        }
+
+        .dark-mode .btn {
+            color: navy;
+        }
+
+        /* Mobile Layout */
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .photo-section img {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="navbar">
-  <div class="logo">Ayomide</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <button onclick="document.body.classList.toggle('dark')">Dark Mode</button>
-  </div>
-</div>
+    <!-- Navigation Bar -->
 
-<div class="card">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+    </nav>
 
-  <h1>About Me</h1>
 
-  <p>My name is Ayomide. I study Computer Science at NOUN and I am learning to code.</p>
+    <!-- About Me Introduction -->
 
-  <h2>My Pictures</h2>
-  <div class="pics">
-    <img src="web.mp5.jpeg" alt="Ayomide">
-    <img src="web.jpg" alt="Ayomide">
-    <img src="OnFire.jpeg" alt="Ayomide">
-  </div>
+    <div class="hero">
 
-  <h2>My Video</h2>
-  <video width="400" controls>
-    <source src="fire.mp4" type="video/mp4">
-    Your browser does not support video.
-  </video>
+        <h1>About Me</h1>
 
-  <h2>Web Design Video</h2>
-  <p>Watch this short video about how a web design starts.</p>
-  <a href="https://www.youtube.com/watch?v=DWOSu8hqFDo" class="btn" target="_blank">Watch on YouTube</a>
+        <p>
+            My name is Ayomide. I study Computer Science at NOUN
+            and I am learning to code.
+        </p>
 
-  <p><a href="index.html">Back to Home</a></p>
+        <p>
+            I enjoy technology, learning new skills, building websites
+            and discovering new things in the world of computing.
+        </p>
 
-</div>
+    </div>
+
+
+    <!-- My Main Picture -->
+
+    <section>
+        <h2>Welcome to My World</h2>
+
+        <div class="photo-section">
+            <img src="web.mp5.jpeg" alt="Ayomide">
+        </div>
+    </section>
+
+
+    <!-- My Other Picture -->
+
+    <section>
+        <h2>My Pictures</h2>
+
+        <div class="photo-section">
+            <img src="web.jpg" alt="Ayomide picture">
+        </div>
+    </section>
+
+
+    <!-- My Video -->
+
+    <section>
+        <h2>My Video</h2>
+
+        <p>
+            Here is a personal video from my collection.
+        </p>
+
+        <div class="video-container">
+
+            <video controls>
+                <source src="fire.mp4" type="video/mp4">
+
+                Your browser does not support video.
+            </video>
+
+        </div>
+    </section>
+
+
+    <!-- Web Design Video -->
+
+    <section>
+        <h2>Web Design Video</h2>
+
+        <p>
+            Watch this short video about how a web design starts
+            and learn more about creating websites.
+        </p>
+
+        <a
+            href="https://www.youtube.com/watch?v=DWOSu8hqFDo"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Watch on YouTube
+        </a>
+
+    </section>
+
+
+    <!-- Back to Home -->
+
+    <div class="back-home">
+
+        <a href="index.html" class="btn">
+            Back to Home
+        </a>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <p>&copy; 2026 Ayomide. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+    </script>
 
 </body>
 </html>
