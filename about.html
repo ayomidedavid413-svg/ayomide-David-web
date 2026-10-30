@@ -1,142 +1,164 @@
-
-<h1><!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>About Me</title>
- <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>About Me</title>
-    <style>
-              .card {
-            background-color: white;
-            max-width: 600px;
-            margin: 30px auto;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px gray;
-        }
-        a {
-            color: darkblue;
-            font-size: 20px;
-        }
-        a:hover {
-            color: red;
-        }
-        h1 {
-            font-family: Georgia, serif;
-            font-size: 40px;
-        }  
-        body {
-            background-color: lightblue;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        h1 {
-            color: darkblue;
-        }
-        h2 {
-            color: purple;
-        }
-        p {
-            color: green;
-        }
-        img {
-            border-radius: 50%;
-        }
-      .btn {
-    background-color: #f0b84d;
-    color: #12284a;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-}  
-    </style>
-</head>
-<body>
-   <div class="card">    
-    <h1>About Me</h1>
-
-    <p>My name is Ayomide. I study Computer Science at NOUN and I am learning to code.</p>
-
-    <h2>My Picture</h2>
-    <img src="web.mp5.jpeg" alt="my pictutre" width="300">
-    <img src="web.jpg" alt="my picture" width="300">
-    <img src="OnFire.jpeg" alt="My picture" width="400">
-
-    <h2>My Video</h2>
-    <video width="400" controls>
-        <source src="fire.mp4" type="video/mp4">
-        Your browser does not support video.
-    </video>
-   <h2>Web Design Video</h2>
-<p>Watch this short video about how a web design starts.</p>
-<a href="https://www.youtube.com/watch?v=DWOSu8hqFDo" class="btn" target="_blank">Watch on YouTube</a> 
-
-    <p><a href="index.html">Back to Home</a></p>
-</div>
-</body>
-</html>   
-</head>
-<body>
-
-    <h1>About Me</h1>
-
-    <p>My name is Ayomide. I study Computer Science at NOUN and I am learning to code.</p>
-
-    <h2>My Picture</h2>
-    <img src="web.mp5.jpeg" alt="my pictutre" width="300">
-    <img src="web.jpg" alt="my picture" width="300">
-    <img src="OnFire.jpeg" alt="My picture" width="400">
-    <h2>My Video</h2>
-    <video width="400" controls>
-        <source src="fire.mp4" type="video/mp4">
-        Your browser does not support video.
-    </video>
-    <h2>Web Design Video</h2>
-<p>Watch this short video about how a web design starts.</p>
-<a href="https://www.youtube.com/watch?v=DWOSu8hqFDo" class="btn" target="_blank">Watch on YouTube</a>
-</body>
-</html>
- <head>
- <h1> Hello, am Ayomide</h1> 
- <p>What am I learning?</p>
- <h2>Am learning html with vs code</h2>
- <h2>This is my first webpage</h2>
- <p> this my first paragraph</p>
- <!DOCTYPE HTML>
- <a href="https://www.google.com">click here to visit google</a>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Webpage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+    }
+    .navbar {
+      background-color: #12284a;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar .logo {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      margin-left: 20px;
+    }
+    .navbar a:hover {
+      color: #f0b84d;
+    }
+    .card {
+      background-color: white;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px gray;
+    }
+    h1 {
+      color: darkblue;
+      font-family: Georgia, serif;
+      font-size: 40px;
+    }
+    h2 {
+      color: purple;
+    }
+    p {
+      color: green;
+    }
+    .pics img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 5px;
+      transition: transform 0.3s;
+    }
+    .pics img:hover {
+      transform: scale(1.1);
+    }
+    video {
+      max-width: 100%;
+    }
+    .card a {
+      color: darkblue;
+      font-size: 20px;
+    }
+    .card a:hover {
+      color: red;
+    }
+    .btn {
+      background-color: #f0b84d;
+      color: #12284a;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .card a.btn {
+      color: #12284a;
+      font-size: 16px;
+    }
+    button {
+      font-size: 16px;
+      padding: 8px 16px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+    }
+    body.dark {
+      background-color: #121212;
+      color: white;
+    }
+    body.dark .card {
+      background-color: #1e1e1e;
+    }
+    body.dark h1,
+    body.dark h2 {
+      color: #f0b84d;
+    }
+    body.dark .card a {
+      color: #f0b84d;
+    }
+    body.dark .card a.btn {
+      color: #12284a;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Welcome to My Webpage</h1>
+<div class="navbar">
+  <div class="logo">Ayomide</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <button onclick="document.body.classList.toggle('dark')">Dark Mode</button>
+  </div>
+</div>
 
-    <p>This is my first webpage with a picture and a video.</p>
+<div class="card">
 
-    <h2>My Picture</h2>
-    <img src="web.mp5.jpeg" alt="my pictutre" width="300">
-    <img src="web.jpg" alt="my picture" width="300">
-    <img src="OnFire.jpeg" alt="My picture" width="400">
+  <h1>About Me</h1>
 
-    <h2>My Video</h2>
-    <video width="400" controls>
-        <source src="fire.mp4" type="video/mp4">
-        Your browser does not support video.
-    </video>
+  <p>My name is Ayomide. I study Computer Science at NOUN and I am learning to code.</p>
+
+  <h2>My Pictures</h2>
+  <div class="pics">
+    <img src="web.mp5.jpeg" alt="Ayomide">
+    <img src="web.jpg" alt="Ayomide">
+    <img src="OnFire.jpeg" alt="Ayomide">
+  </div>
+
+  <h2>My Video</h2>
+  <video width="400" controls>
+    <source src="fire.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+
   <h2>Web Design Video</h2>
-<p>Watch this short video about how a web design starts.</p>
-<a href="https://www.youtube.com/watch?v=DWOSu8hqFDo" class="btn" target="_blank">Watch on YouTube</a>  
+  <p>Watch this short video about how a web design starts.</p>
+  <a href="https://www.youtube.com/watch?v=DWOSu8hqFDo" class="btn" target="_blank">Watch on YouTube</a>
+
+  <p><a href="index.html">Back to Home</a></p>
+
+</div>
+
 </body>
 </html>
-
-<body
-</body>
- </head>   

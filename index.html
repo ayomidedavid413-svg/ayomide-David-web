@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <div class="card">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Page</title>
+  <title>Ayomide's Home Page</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+    }
     .navbar {
       background-color: #12284a;
       padding: 15px 30px;
@@ -18,7 +26,7 @@
       font-size: 22px;
       font-weight: bold;
     }
-    .vabar a {
+    .navbar a {
       color: white;
       text-decoration: none;
       margin-left: 20px;
@@ -27,61 +35,35 @@
       color: #f0b84d;
     }
     .hero {
-    text-align: center;
-    padding: 50px 20px;
-}
-.hero img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.hero h1 {
-    font-size: 36px;
-    color: #12284a;
-}
-.hero .btn {
-    background-color: #f0b84d;
-    color: #12284a;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-}
-    }
-    .card {
-    background-color: white;
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px gray;
-}
-    body {
-      background-color: lightblue;
-      font-family: Arial, sans-serif;
       text-align: center;
+      padding: 50px 20px;
+      animation: fadeIn 3s ease;
     }
-    h1 {
-      color: darkblue;
-    }
-    p {
-      color: green;
-    }
-    li {
-      color: purple;
-      font-size: 20px;
-      list-style-position: inside;
-    }
-    img {
+    .hero img {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
+      object-fit: cover;
+      margin: 5px;
+      transition: transform 0.3s;
     }
-    button {
-      font-size: 18px;
-      padding: 10px 20px;
-      margin-top: 15px;
+    .hero img:hover {
+      transform: scale(1.1);
     }
-    .section{
+    .hero h1 {
+      font-size: 36px;
+      color: #12284a;
+      min-height: 45px;
+    }
+    .hero .btn {
+      background-color: #f0b84d;
+      color: #12284a;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
       text-align: center;
       padding: 30px 20px;
     }
@@ -101,169 +83,161 @@
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+    }
+    .card-item:hover {
+      transform: translateY(-8px);
     }
     .card-item h3 {
       color: #12284a;
     }
     .contact {
-    background-color: #12284a;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-.contact h2 {
-    color: #f0b84d;
-}
-.contact a {
-    color: white;
-}
-.footer {
-    background-color: #0c1c36;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
-}
-  </style>
-</head>
-  <h1>Hello, I'm Ayomide</h1>
-  <p>This is my first paragraph</p>
-  <h2>What I am learning</h2>
-  <p>I am learning HTML with VS Code.</p>
-  <a href="https://www.google.com">Click here to visit Google</a>
-  <br><br>
-  <img src="web.mp5.jpeg" alt="my picture" width="300">
-  <img src="web.jpg" alt="my picture" width="300>"
-  <img src="OnFire.jpeg" alt="My picture" width="300">
-  <h2>My Hobbies</h2>
-  <ul
-    <li>Coding</li>
-    <li>music</li>
-    <li>Football</li>
-  </ul>
-  <button onclick="changeHeading()">Click me</button>
-  <script>
-    function changeHeading() {
-      document.querySelector("h1").textContent = "Welcome to my page!";
-    }
-  </script>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Page</title>
-  <style>
-    body {
-      background-color: rgb(127, 167, 181);
-      font-family: Arial, sans-serif;
+      background-color: #12284a;
+      color: white;
       text-align: center;
+      padding: 40px 20px;
     }
-    h1 {
-      color: darkblue;
+    .contact h2 {
+      color: #f0b84d;
     }
-    p {
-      color: green;
+    .contact a {
+      color: white;
     }
-    li {
-      color: purple;
-      font-size: 20px;
-      list-style-position: inside;
-    }
-    img {
-      border-radius: 50%;
+    .footer {
+      background-color: #0c1c36;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
     }
     button {
-      font-size: 18px;
-      padding: 10px 20px;
-      margin-top: 15px;
+      font-size: 16px;
+      padding: 8px 16px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero h1 {
+        font-size: 26px;
+      }
+      .card-item {
+        width: 90%;
+      }
+    }
+    body.dark {
+      background-color: #121212;
+      color: white;
+    }
+    body.dark .card-item {
+      background-color: #1e1e1e;
+    }
+    body.dark .hero h1 {
+      color: white;
+    }
+    body.dark .card-item h3,
+    body.dark .section h2 {
+      color: #f0b84d;
     }
   </style>
 </head>
+<body>
+
 <div class="navbar">
-    <div class="logo">Ayomide</div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-    </div>
+  <div class="logo">Ayomide</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="#learning">Learning</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#contact">Contact</a>
+    <a href="about.html">About Me</a>
+    <button onclick="document.body.classList.toggle('dark')">Dark Mode</button>
+  </div>
 </div>
-<div class="section">
-    <h2>What I Am Learning</h2>
-    <div class="cards">
-        <div class="card-item">
-            <h3>HTML</h3>
-            <p>The structure of a website.</p>
-        </div>
-        <div class="card-item">
-            <h3>CSS</h3>
-            <p>The style and colors of a website.</p>
-        </div>
-        <div class="card-item">
-            <h3>Python</h3>
-            <p>My first programming language.</p>
-        </div>
-    </div>
-</div>
-<div class="section">
-    <h2>My Hobbies</h2>
-    <div class="cards">
-        <div class="card-item">
-            <h3>Football</h3>
-            <p>I love watching and playing football.</p>
-        </div>
-        <div class="card-item">
-            <h3>Music</h3>
-            <p>Music keeps me going while I code.</p>
-        </div>
-        <div class="card-item">
-            <h3>Coding</h3>
-            <p>Building websites is now a hobby too.</p>
-        </div>
-    </div>
-</div>
-<div class="contact">
-    <h2>Contact Me</h2>
-    <p>Want to say hello? Send me a message.</p>
-    <p>Email: ayomidedavid413@gmail.com</p>
-    <p>WhatsApp: +234 9166139230</p>
-</div>
-<div class="footer">
-    <p>© 2026 Ayomide. Built with HTML and CSS.</p>
-</div>
+
 <div class="hero">
   <img src="web.mp5.jpeg" alt="Ayomide">
   <img src="web.jpg" alt="Ayomide">
-    <img src="OnFire.jpeg" alt="Ayomide">
-    <h1>Welcome, I am Ayomide</h1>
-    <p>I am a first-year Computer Science student learning to code.</p>
-    <a href="about.html" class="btn">About Me</a>
- <a href="https://www.youtube.com/watch?v=DWOSu8hqFDo" class="btn" target="_blank">Watch my video</a>  
+  <img src="OnFire.jpeg" alt="Ayomide">
+  <h1 id="typing"></h1>
+  <p>I am a first-year Computer Science student learning to code.</p>
+  <a href="about.html" class="btn">About Me</a>
+  <a href="https://www.youtube.com/watch?v=DWOSu8hqFDo" class="btn" target="_blank">Watch my video</a>
 </div>
-<body>
-  <h1>Hello, I'm Ayomide</h1>
-  <p>This is my first paragraph</p>
-  <h2>What I am learning</h2>
-  <p>I am learning HTML with VS Code.</p>
-  <a href="https://www.google.com">Click here to visit Google</a>
-  <br><br>
-  <img src="web.mp5.jpeg" alt="my picture" width="300">
-  <img src="web.jpg" alt="my picture" width="300">
-  <img src="OnFire.jpeg" alt="My picture" width="300">
-  <h2>My Hobbies</h2>
-  <ul>
-    <li>Coding</li>
-    <li>music</li>
-    <li>Football</li>
-  </ul>
-  <p><a href="about.html">About Me</a></p>
-<button onclick="changeHeading()">Click me</button>
-  <script>
-    function changeHeading() {
-      document.querySelector("h1").textContent = "Welcome to my page!";
-    }
-  </script>
+
+<div class="section" id="learning">
+  <h2>What I Am Learning</h2>
+  <div class="cards">
+    <div class="card-item">
+      <h3>HTML</h3>
+      <p>The structure of a website.</p>
+    </div>
+    <div class="card-item">
+      <h3>CSS</h3>
+      <p>The style and colors of a website.</p>
+    </div>
+    <div class="card-item">
+      <h3>Python</h3>
+      <p>My first programming language.</p>
+    </div>
   </div>
-</body>
-</html>
+</div>
+
+<div class="section" id="hobbies">
+  <h2>My Hobbies</h2>
+  <div class="cards">
+    <div class="card-item">
+      <h3>Football</h3>
+      <p>I love watching and playing football.</p>
+    </div>
+    <div class="card-item">
+      <h3>Music</h3>
+      <p>Music keeps me going while I code.</p>
+    </div>
+    <div class="card-item">
+      <h3>Coding</h3>
+      <p>Building websites is now a hobby too.</p>
+    </div>
+  </div>
+</div>
+
+<div class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p>Want to say hello? Send me a message.</p>
+  <p>Email: ayomidedavid413@gmail.com</p>
+  <p>WhatsApp: +234 9166139230</p>
+</div>
+
+<div class="footer">
+  <p>© 2026 Ayomide. Built with HTML and CSS.</p>
+</div>
+
+<script>
+  const text = "Welcome, I am Ayomide";
+  const heading = document.getElementById("typing");
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      heading.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 100);
+    }
+  }
+  type();
+</script>
+
 </body>
 </html>
